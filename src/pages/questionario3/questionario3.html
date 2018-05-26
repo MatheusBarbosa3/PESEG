@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Questionário
+          <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="colorq3">
+
+  <h3>Questionário de Maturidade de Requisitos 3</h3>
+
+  <ion-item class="colorq3">
+      <ion-label><p class="question3">O requisito atende a necessidade da empresa?</p></ion-label>
+      <ion-select [(ngModel)]="j" class="question3">
+          <ion-option value="s">Sim</ion-option>
+          <ion-option value="n">Não</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="colorq3">
+      <ion-label><p class="questionq3">O requisito agrega valor a empresa?</p></ion-label>
+      <ion-select [(ngModel)]="k" class="questionq3">
+          <ion-option value="s">Sim</ion-option>
+          <ion-option value="n">Não</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="colorq3">
+      <ion-label><p class="questionq3">O requisito é bem conhecido por todos?</p></ion-label>
+      <ion-select [(ngModel)]="l" class="questionq3">
+          <ion-option value="s">Sim</ion-option>
+          <ion-option value="n">Não</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="colorq3">
+      <ion-label><p class="questionq3">O requisito cumpre o que promete realizar?</p></ion-label>
+      <ion-select [(ngModel)]="m" class="questionq3">
+          <ion-option value="s">Sim</ion-option>
+          <ion-option value="n">Não</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="colorq3">
+    <ion-label><p class="questionq3">O requisito está alinhado com os objetivos da empresa?</p></ion-label>
+    <ion-select [(ngModel)]="n" class="questionq3">
+        <ion-option value="s">Sim</ion-option>
+        <ion-option value="n">Não</ion-option>
+    </ion-select>
+</ion-item>
+   
+  <button ion-button class="btn-menu3" secondary menuToggle>Menu</button>
+  <button ion-button class="btn-anterior3" (click)="btnAnterior3()">Anterior</button>
+  <button ion-button class="btn-proximo3"  (click)="presentLoading3()" (click)="btnProximo3()">Próximo</button>
+
+</ion-content>

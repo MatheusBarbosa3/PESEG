@@ -1,0 +1,42 @@
+page-questionario {
+
+    ion-content {
+        align-items: right;
+        text-align: center;
+    }
+    .btn-menu1{
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 150px
+        
+     }
+     .btn-proximo{
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 150px
+     }
+     .color{
+         background: rgb(223, 222, 222)
+         
+         
+     }
+     .question1{
+        padding-top: 70px;
+        padding-left: 150px;
+        padding-right:180px;
+        color: black;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1em;
+     }
+     .question{
+        padding-left: 150px;
+        padding-right:180px;
+        color: black;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1em;
+
+     }
+
+}

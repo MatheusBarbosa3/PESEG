@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Questionário
+          <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="colorq2">
+
+  <h3>Questionário de Maturidade de Requisitos 2</h3>
+
+  <ion-item class="colorq2">
+      <ion-label><p class="question2">Existe um plano de contingência?</p></ion-label>
+      <ion-select [(ngModel)]="e" class="question2">
+          <ion-option value="s">Sim</ion-option>
+          <ion-option value="n">Não</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="colorq2">
+      <ion-label><p class="questionq2">O requisito pode ser considerado robusto?</p></ion-label>
+      <ion-select [(ngModel)]="f" class="questionq2">
+          <ion-option value="s">Sim</ion-option>
+          <ion-option value="n">Não</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="colorq2">
+      <ion-label><p class="questionq2">O requisito oferece riscos a outras áreas?</p></ion-label>
+      <ion-select [(ngModel)]="g" class="questionq2">
+          <ion-option value="s">Sim</ion-option>
+          <ion-option value="n">Não</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="colorq2">
+      <ion-label><p class="questionq2">Em caso de perda o requisito pode ser resgatado?</p></ion-label>
+      <ion-select [(ngModel)]="h" class="questionq2">
+          <ion-option value="s">Sim</ion-option>
+          <ion-option value="n">Não</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="colorq2">
+    <ion-label><p class="questionq2">Existe uma documentação para a operação anterior?</p></ion-label>
+    <ion-select [(ngModel)]="i" class="questionq2">
+        <ion-option value="s">Sim</ion-option>
+        <ion-option value="n">Não</ion-option>
+    </ion-select>
+</ion-item>
+   
+  <button ion-button class="btn-menu2" secondary menuToggle>Menu</button>
+  <button ion-button class="btn-anterior2" (click)="btnAnterior2()">Anterior</button>
+  <button ion-button class="btn-proximo2" (click)="presentLoading2()" (click)="btnProximo2()">Próximo</button>
+
+</ion-content>
