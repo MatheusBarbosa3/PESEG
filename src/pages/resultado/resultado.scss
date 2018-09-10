@@ -1,10 +1,16 @@
-page-questionario2 {
-
-    ion-content {
-        align-items: right;
+page-resultado {
+    .color{
         text-align: center;
+        background: rgb(83, 83, 83);
+        
     }
-    .btn-menu2{
+    .p{
+        color: rgb(66, 152, 250);
+        font-size: 28px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background: rgb(83, 83, 83);
+     }
+     .btn-menuResultado{
         margin-left: -140px;
         margin-top: 150px;
         position: fixed;
@@ -13,7 +19,7 @@ page-questionario2 {
         color: black;
         
      }
-     .btn-anterior2{
+     .btn-concluir{
         margin-top: 150px; 
         margin-left: -60px;
         position: fixed;
@@ -22,7 +28,7 @@ page-questionario2 {
         color: black;
 
      }
-     .btn-proximo2{
+     .btn-acmelhoria{
         margin-left: 50px;
         margin-top: 150px;
         position: fixed;
@@ -30,19 +36,6 @@ page-questionario2 {
         border-radius: 4px;
         color: black;
      }
-     .color{
-        width: 60%;
-        position: relative;
-        margin-left: 20%;
-        background: rgb(83, 83, 83);
-        top: 10%;
-     }
-     .p{
-        color: rgb(66, 152, 250);
-        font-size: 18px;
-        background: rgb(83, 83, 83);
-     }
+
 
 }
-
-

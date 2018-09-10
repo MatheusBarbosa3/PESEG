@@ -7,10 +7,24 @@ import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 import { QuestionarioPage } from '../pages/questionario/questionario';
 import { Questionario2Page } from '../pages/questionario2/questionario2';
 import { Questionario3Page } from '../pages/questionario3/questionario3';
 import { Questionario4Page } from '../pages/questionario4/questionario4';
+import { ResultadoPage } from '../pages/resultado/resultado';
+
+var config = {
+    apiKey: "AIzaSyCD-yVpArc_WkiyE7sWZhyTb5fwxIfL4JE",
+    authDomain: "peseg-fc173.firebaseapp.com",
+    databaseURL: "https://peseg-fc173.firebaseio.com",
+    projectId: "peseg-fc173",
+    storageBucket: "peseg-fc173.appspot.com",
+    messagingSenderId: "847705539800"
+
+};
 
 @NgModule({
   declarations: [
@@ -19,11 +33,14 @@ import { Questionario4Page } from '../pages/questionario4/questionario4';
     QuestionarioPage,
     Questionario2Page, 
     Questionario3Page,
-    Questionario4Page
+    Questionario4Page,
+    ResultadoPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,7 +49,8 @@ import { Questionario4Page } from '../pages/questionario4/questionario4';
     QuestionarioPage,
     Questionario2Page,
     Questionario3Page,
-    Questionario4Page
+    Questionario4Page,
+    ResultadoPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Resultado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="color">
+  
+  <p class="p">{{nivel1}}</p>
+  <p class="p">{{nivel2}}</p>
+  <p class="p">{{nivel3}}</p>
+  <p class="p">{{nivel4}}</p>
+  <p class="p">{{nivel5}}</p>
+
+  <button ion-button class="btn-menuResultado" secondary menuToggle>Menu</button>
+  <button ion-button class="btn-concluir" (click)="presentLoadingResult()" (click)="btnConcluir()">Concluir</button>
+  <button ion-button class="btn-acmelhoria" (click)="btnAcMelhoria()">Ações de Melhoria</button>
+
+</ion-content>

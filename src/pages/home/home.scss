@@ -1,13 +1,26 @@
 page-home {
- 
-    ion-content {
-        align-items: right;
-        text-align: center;
+
+    .background{
+        background-image: url(../../assets/imgs/segurançapeseg.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
     }
-    .btn-menu{
+    .titulo{
         text-align: center;
-        padding: 15px 20px;
-        margin-top: 400px
+        font-size: 30px;
+        font-family: 'Righteous', cursive;
         }
-  
+    .copy{
+        
+        position: fixed;
+        bottom: 10px;
+        margin-left: 38%;
+        font-size: 12px;
+    }
+    .text-info{
+        font-family: 'Righteous', cursive;
+
+    }
 }
