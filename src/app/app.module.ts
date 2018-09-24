@@ -15,6 +15,9 @@ import { Questionario2Page } from '../pages/questionario2/questionario2';
 import { Questionario3Page } from '../pages/questionario3/questionario3';
 import { Questionario4Page } from '../pages/questionario4/questionario4';
 import { ResultadoPage } from '../pages/resultado/resultado';
+import { SobrePage } from '../pages/sobre/sobre';
+import { MelhoriaPage } from '../pages/melhoria/melhoria';
+import { RequisitosPage } from '../pages/requisitos/requisitos';
 
 var config = {
     apiKey: "AIzaSyCD-yVpArc_WkiyE7sWZhyTb5fwxIfL4JE",
@@ -34,7 +37,10 @@ var config = {
     Questionario2Page, 
     Questionario3Page,
     Questionario4Page,
-    ResultadoPage
+    ResultadoPage,
+    MelhoriaPage,
+    SobrePage,
+    RequisitosPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,10 @@ var config = {
     Questionario2Page,
     Questionario3Page,
     Questionario4Page,
-    ResultadoPage
+    ResultadoPage,
+    MelhoriaPage,
+    SobrePage,
+    RequisitosPage
   ],
   providers: [
     StatusBar,

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Questionario2Page } from '../questionario2/questionario2';
+import { QuestionarioPage } from '../questionario/questionario';
 import { Questionario4Page } from '../questionario4/questionario4';
 import { LoadingController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { ResultadoPage } from '../resultado/resultado';
+import { RequisitosPage } from '../requisitos/requisitos';
 
 
 @IonicPage()
@@ -13,7 +14,6 @@ import { ResultadoPage } from '../resultado/resultado';
   templateUrl: 'questionario3.html',
 })
 export class Questionario3Page {
-  arrData = [];
   j;
   k;
   l;
@@ -22,10 +22,10 @@ export class Questionario3Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController,
     public fdb: AngularFireDatabase) {
-    this.fdb.list("/questionario3/").snapshotChanges().subscribe(_data => {
-      this.arrData = _data;
-      console.log(this.arrData);
-    })
+    // this.fdb.teste("/questionario3/").snapshotChanges().subscribe(_data => {
+    //   this.arrData = _data;
+    //   console.log(this.arrData);
+    // })
   }
   presentLoading3() {
     let loader = this.loadingCtrl.create({
@@ -40,18 +40,48 @@ export class Questionario3Page {
   }
 
   btnProximo3() {
-    if (this.j == "não" || this.k == "não" || this.l == "não" || this.m == "não") {
-      this.navCtrl.push(Questionario4Page, {param3: "Seu nível de segurança é Seguro"}); 
-      
-    }else{
-      this.navCtrl.push(Questionario4Page, {param4: "Seu nível de segurança é Satisfatório"}); 
+
+    if (this.j == "não") {
+      QuestionarioPage.teste[9] = "F";
+    } else {
+      QuestionarioPage.teste[9] = "V";
     }
-    // this.fdb.list("/questionario3/").push(this.j);
-    // this.fdb.list("/questionario3/").push(this.k);
-    // this.fdb.list("/questionario3/").push(this.l);
-    // this.fdb.list("/questionario3/").push(this.m);
-    // this.fdb.list("/questionario3/").push(this.n);
+
+    if (this.k == "não") {
+      QuestionarioPage.teste[10] = "F";
+    } else {
+      QuestionarioPage.teste[10] = "V";
+    }
+
+    if (this.l == "não") {
+      QuestionarioPage.teste[11] = "F";
+    } else {
+      QuestionarioPage.teste[11] = "V";
+    }
+
+    if (this.m == "não") {
+      QuestionarioPage.teste[12] = "F";
+    } else {
+      QuestionarioPage.teste[12] = "V";
+    }
+
+    if (this.n == "não") {
+      QuestionarioPage.teste[13] = "F";
+    } else {
+      QuestionarioPage.teste[13] = "V";
+    }
+
+    this.navCtrl.push(Questionario4Page);
+
+    // this.fdb.teste("/questionario3/").push(this.j);
+    // this.fdb.teste("/questionario3/").push(this.k);
+    // this.fdb.teste("/questionario3/").push(this.l);
+    // this.fdb.teste("/questionario3/").push(this.m);
+    // this.fdb.teste("/questionario3/").push(this.n);
     //this.navCtrl.push(Questionario4Page);
+  }
+  btnRequisitos3() {
+    this.navCtrl.push(RequisitosPage);
   }
 
   ionViewDidLoad() {

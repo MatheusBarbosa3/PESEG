@@ -1,43 +1,50 @@
 <ion-header>
-  <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Questionário
-          <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>
-      </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Questionário
+            <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding class="p">
 
-  <h3>Questionário de Maturidade de Requisitos parte 4</h3>
+    <h3>Questionário de Maturidade de Requisitos - Etapa 4 / 4</h3>
 
-  <ion-item class="color">
-      <ion-label><p class="p">O requisito é a melhor solução em termos de custo-benefício?</p></ion-label>
-      <ion-select [(ngModel)]="o" class="p">
-          <ion-option value="sim">Sim</ion-option>
-          <ion-option value="não">Não</ion-option>
-      </ion-select>
-  </ion-item>
-  <ion-item class="color">
-      <ion-label><p class="p">O requisito é a solução mais atual?</p></ion-label>
-      <ion-select [(ngModel)]="p" class="p">
-          <ion-option value="sim">Sim</ion-option>
-          <ion-option value="não">Não</ion-option>
-      </ion-select>
-  </ion-item>
-  <ion-item class="color">
-      <ion-label><p class="p">O requisito é a melhor opção para a situação?</p></ion-label>
-      <ion-select [(ngModel)]="q" class="p">
-          <ion-option value="sim">Sim</ion-option>
-          <ion-option value="não">Não</ion-option>
-      </ion-select>
-  </ion-item>
+    <ion-item class="color">
+        <ion-label>
+            <p class="p">O requisito é a melhor solução em termos de custo-benefício?</p>
+        </ion-label>
+        <ion-select [(ngModel)]="o" class="p">
+            <ion-option value="sim">Sim</ion-option>
+            <ion-option value="não">Não</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item class="color">
+        <ion-label>
+            <p class="p">O requisito é a solução mais atual?</p>
+        </ion-label>
+        <ion-select [(ngModel)]="p" class="p">
+            <ion-option value="sim">Sim</ion-option>
+            <ion-option value="não">Não</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item class="color">
+        <ion-label>
+            <p class="p">O requisito é a melhor opção para a situação?</p>
+        </ion-label>
+        <ion-select [(ngModel)]="q" class="p">
+            <ion-option value="sim">Sim</ion-option>
+            <ion-option value="não">Não</ion-option>
+        </ion-select>
+    </ion-item>
 
-   
-  <button ion-button class="btn-menu4" secondary menuToggle>Menu</button>
-  <button ion-button class="btn-anterior4" (click)="btnAnterior4()">Anterior</button>
-  <button ion-button class="btn-finalizar" (click)="btnFinalizar()">Finalizar</button>
+    <button ion-button class="btn-menu4" secondary menuToggle>Menu</button>
+    <button ion-button class="btn-anterior4" (click)="btnAnterior4()">Anterior</button>
+    <button ion-button class="btn-finalizar" (click)="presentLoading4()" (click)="btnFinalizar()">Finalizar</button>
+    <button ion-button clear class="information" (click)="btnRequisitos4()"><img src="../../assets/imgs/icons8-informações-50.png"
+        /></button>
 
 </ion-content>

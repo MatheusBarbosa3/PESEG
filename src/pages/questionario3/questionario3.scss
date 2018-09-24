@@ -10,8 +10,7 @@ page-questionario3 {
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;
-        
+        color: black;      
      }
      .btn-anterior3{
         margin-top: 150px; 
@@ -20,7 +19,6 @@ page-questionario3 {
         bottom: 28px;
         border-radius: 4px;
         color: black;
-
      }
      .btn-proximo3{
         margin-left: 50px;
@@ -34,13 +32,19 @@ page-questionario3 {
         width: 60%;
         position: relative;
         margin-left: 20%;
-        background: rgb(83, 83, 83);
+        background: #091226; 
         top: 10%;
      }
      .p{
         color: rgb(66, 152, 250);
         font-size: 18px;
-        background: rgb(83, 83, 83);
+        background: #091226; 
      }
-
+     .information{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 60px;
+        border-radius: 100px;
+    }
 }

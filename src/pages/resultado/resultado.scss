@@ -1,14 +1,15 @@
 page-resultado {
+
     .color{
         text-align: center;
-        background: rgb(83, 83, 83);
+        background: #091226; 
         
     }
     .p{
         color: rgb(66, 152, 250);
         font-size: 28px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        background: rgb(83, 83, 83);
+        background: #091226; 
      }
      .btn-menuResultado{
         margin-left: -140px;
@@ -16,8 +17,7 @@ page-resultado {
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;
-        
+        color: black;       
      }
      .btn-concluir{
         margin-top: 150px; 
@@ -26,7 +26,6 @@ page-resultado {
         bottom: 28px;
         border-radius: 4px;
         color: black;
-
      }
      .btn-acmelhoria{
         margin-left: 50px;
@@ -36,6 +35,4 @@ page-resultado {
         border-radius: 4px;
         color: black;
      }
-
-
 }

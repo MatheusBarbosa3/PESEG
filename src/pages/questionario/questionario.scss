@@ -2,21 +2,15 @@ page-questionario {
 
     ion-content {
         align-items: right;
-        text-align: center;
-        
-        
+        text-align: center;     
     }
-    
     .btn-menu1{
         margin-left: -80px;
         margin-top: 150px;
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;
-     
-     
-        
+        color: black;   
      }
      .btn-proximo{
         padding: 15px 10px;
@@ -25,25 +19,24 @@ page-questionario {
         bottom: 28px;
         border-radius: 4px;
         color: black;
-  
      }
-     .color{ //classe responsavel por redimensionar a label no centro
+     .color{ 
         width: 60%;
         position: relative;
         margin-left: 20%;
-        background: rgb(83, 83, 83);
+        background: #091226;
         top: 10%;
-         
-
      }
-
-     .p{ //classe responsavel pela fonte das palavras 
+     .p{  
         color: rgb(66, 152, 250);
         font-size: 18px;
-        background: rgb(83, 83, 83);
-
-       
-          
+        background: #091226;       
     }
-
+    .information{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 60px;
+        border-radius: 100px;
+    }
 }
