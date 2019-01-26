@@ -24,16 +24,16 @@ ionic serve
 **Telas:**
 
 Tela principal com acesso ao menu, para navegação da aplicação.
-<img src="././assets/Prints/TelaPrincipal.png"/>
+![](https://github.com/MatheusBarbosa3/PESEG/blob/master/src/assets/Prints/TelaPrincipal.png)
 
 O questionário de requisitos.  
-<img src="././assets/Prints/TelaQuestionario.png"/>
+![](https://github.com/MatheusBarbosa3/PESEG/blob/master/src/assets/Prints/TelaQuestionario.png)
 
 A página do resultado obtido.
-<img src="././assets/Prints/TelaResultado.png"/>
+![](https://github.com/MatheusBarbosa3/PESEG/blob/master/src/assets/Prints/TelaResultado.png)
 
 Tela de ações de melhoria após o resultado.
-<img src="././assets/Prints/TelaAcoesMelhoria.png"/>
+![](https://github.com/MatheusBarbosa3/PESEG/blob/master/src/assets/Prints/TelaAcoesMelhoria.png)
 
 
 
