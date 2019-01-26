@@ -2,14 +2,13 @@ page-resultado {
 
     .color{
         text-align: center;
-        background: #091226; 
-        
-    }
+        background: #0e1c3b;      
+     }
     .p{
-        color: rgb(66, 152, 250);
+        color: white;
         font-size: 28px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        background: #091226; 
+        background: #0e1c3b; 
      }
      .btn-menuResultado{
         margin-left: -140px;
@@ -17,7 +16,8 @@ page-resultado {
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;       
+        color: white;
+        background-color: #7044ff;       
      }
      .btn-concluir{
         margin-top: 150px; 
@@ -25,7 +25,8 @@ page-resultado {
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;
+        color: white;
+        background-color: #7044ff;
      }
      .btn-acmelhoria{
         margin-left: 50px;
@@ -33,6 +34,7 @@ page-resultado {
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;
+        color: white;
+        background-color: #7044ff;
      }
 }

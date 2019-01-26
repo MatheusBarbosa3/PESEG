@@ -10,4 +10,4 @@ import { ResultadoPage } from './resultado';
     IonicPageModule.forChild(ResultadoPage),
   ],
 })
-export class ResultadoPageModule {}
+export class ResultadoPageModule { }

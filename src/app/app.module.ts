@@ -18,15 +18,57 @@ import { ResultadoPage } from '../pages/resultado/resultado';
 import { SobrePage } from '../pages/sobre/sobre';
 import { MelhoriaPage } from '../pages/melhoria/melhoria';
 import { RequisitosPage } from '../pages/requisitos/requisitos';
+import { ServicoProvider } from '../providers/servico/servico';
+import { NotifierModule, NotifierOptions } from 'angular-notifier';
 
 var config = {
-    apiKey: "AIzaSyCD-yVpArc_WkiyE7sWZhyTb5fwxIfL4JE",
-    authDomain: "peseg-fc173.firebaseapp.com",
-    databaseURL: "https://peseg-fc173.firebaseio.com",
-    projectId: "peseg-fc173",
-    storageBucket: "peseg-fc173.appspot.com",
-    messagingSenderId: "847705539800"
+  apiKey: "AIzaSyCD-yVpArc_WkiyE7sWZhyTb5fwxIfL4JE",
+  authDomain: "peseg-fc173.firebaseapp.com",
+  databaseURL: "https://peseg-fc173.firebaseio.com",
+  projectId: "peseg-fc173",
+  storageBucket: "peseg-fc173.appspot.com",
+  messagingSenderId: "847705539800"
 
+};
+const customNotifierOptions: NotifierOptions = {
+  position: {
+		horizontal: {
+			position: 'left',
+			distance: 12
+		},
+		vertical: {
+			position: 'bottom',
+			distance: 12,
+			gap: 10
+		}
+	},
+  theme: 'material',
+  behaviour: {
+    autoHide: 1500,
+    onClick: 'hide',
+    onMouseover: 'pauseAutoHide',
+    showDismissButton: true,
+    stacking: 4
+  },
+  animations: {
+    enabled: true,
+    show: {
+      preset: 'slide',
+      speed: 300,
+      easing: 'ease'
+    },
+    hide: {
+      preset: 'fade',
+      speed: 300,
+      easing: 'ease',
+      offset: 50
+    },
+    shift: {
+      speed: 300,
+      easing: 'ease'
+    },
+    overlap: 150
+  }
 };
 
 @NgModule({
@@ -34,7 +76,7 @@ var config = {
     MyApp,
     HomePage,
     QuestionarioPage,
-    Questionario2Page, 
+    Questionario2Page,
     Questionario3Page,
     Questionario4Page,
     ResultadoPage,
@@ -46,6 +88,7 @@ var config = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
+    NotifierModule.withConfig(customNotifierOptions),
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
@@ -65,7 +108,8 @@ var config = {
     StatusBar,
     SplashScreen,
     LoadingController,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ServicoProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

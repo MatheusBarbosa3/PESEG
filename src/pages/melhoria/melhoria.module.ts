@@ -10,4 +10,4 @@ import { MelhoriaPage } from './melhoria';
     IonicPageModule.forChild(MelhoriaPage),
   ],
 })
-export class MelhoriaPageModule {}
+export class MelhoriaPageModule { }

@@ -5,7 +5,7 @@ import { QuestionarioPage } from '../questionario/questionario';
 import { Questionario4Page } from '../questionario4/questionario4';
 import { LoadingController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { RequisitosPage } from '../requisitos/requisitos';
+import { ServicoProvider } from '../../providers/servico/servico';
 
 
 @IonicPage()
@@ -19,18 +19,21 @@ export class Questionario3Page {
   l;
   m;
   n;
+  servicoProvider: ServicoProvider;
+  choice: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController,
-    public fdb: AngularFireDatabase) {
-    // this.fdb.teste("/questionario3/").snapshotChanges().subscribe(_data => {
-    //   this.arrData = _data;
-    //   console.log(this.arrData);
-    // })
+    public fdb: AngularFireDatabase, servico: ServicoProvider) {
+      
+    //pegando o provider servico e injetando em requisitos, passando via parametro para questionario3
+    this.servicoProvider = servico;
+    this.choice = servico.getEscolha();
+
   }
   presentLoading3() {
     let loader = this.loadingCtrl.create({
       content: "Carregando...",
-      duration: 300
+      duration: 200
     });
     loader.present();
   }
@@ -42,46 +45,36 @@ export class Questionario3Page {
   btnProximo3() {
 
     if (this.j == "não") {
-      QuestionarioPage.teste[9] = "F";
+      QuestionarioPage.question[9] = "F";
     } else {
-      QuestionarioPage.teste[9] = "V";
+      QuestionarioPage.question[9] = "V";
     }
 
     if (this.k == "não") {
-      QuestionarioPage.teste[10] = "F";
+      QuestionarioPage.question[10] = "F";
     } else {
-      QuestionarioPage.teste[10] = "V";
+      QuestionarioPage.question[10] = "V";
     }
 
     if (this.l == "não") {
-      QuestionarioPage.teste[11] = "F";
+      QuestionarioPage.question[11] = "F";
     } else {
-      QuestionarioPage.teste[11] = "V";
+      QuestionarioPage.question[11] = "V";
     }
 
     if (this.m == "não") {
-      QuestionarioPage.teste[12] = "F";
+      QuestionarioPage.question[12] = "F";
     } else {
-      QuestionarioPage.teste[12] = "V";
+      QuestionarioPage.question[12] = "V";
     }
 
     if (this.n == "não") {
-      QuestionarioPage.teste[13] = "F";
+      QuestionarioPage.question[13] = "F";
     } else {
-      QuestionarioPage.teste[13] = "V";
+      QuestionarioPage.question[13] = "V";
     }
 
     this.navCtrl.push(Questionario4Page);
-
-    // this.fdb.teste("/questionario3/").push(this.j);
-    // this.fdb.teste("/questionario3/").push(this.k);
-    // this.fdb.teste("/questionario3/").push(this.l);
-    // this.fdb.teste("/questionario3/").push(this.m);
-    // this.fdb.teste("/questionario3/").push(this.n);
-    //this.navCtrl.push(Questionario4Page);
-  }
-  btnRequisitos3() {
-    this.navCtrl.push(RequisitosPage);
   }
 
   ionViewDidLoad() {

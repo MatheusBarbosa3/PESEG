@@ -12,12 +12,13 @@
 <ion-content padding class="p">
 
     <h3>Questionário de Maturidade de Requisitos - Etapa 1 / 4</h3>
+    <h6>Requisito: {{choice}}</h6>
 
     <ion-item class="color">
         <ion-label>
             <p class="p">O requisito existe?</p>
         </ion-label>
-        <ion-select [(ngModel)]="a" class="p">
+        <ion-select [(ngModel)]="a" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
@@ -26,7 +27,7 @@
         <ion-label>
             <p class="p">Existe interesse neste requisito?</p>
         </ion-label>
-        <ion-select [(ngModel)]="b" class="p">
+        <ion-select [(ngModel)]="b" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
@@ -35,7 +36,7 @@
         <ion-label>
             <p class="p">O requisito é utilizado?</p>
         </ion-label>
-        <ion-select [(ngModel)]="c" class="p">
+        <ion-select [(ngModel)]="c" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
@@ -44,15 +45,16 @@
         <ion-label>
             <p class="p">O requisito cumpre o especificado mesmo que de forma instável?</p>
         </ion-label>
-        <ion-select [(ngModel)]="d" class="p">
+        <ion-select [(ngModel)]="d" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
     </ion-item>
 
     <button ion-button class="btn-menu1" secondary menuToggle>Menu</button>
-    <button ion-button class="btn-proximo" (click)="presentLoading()" (click)="btnProximo()">Próximo</button>
-    <button ion-button clear class="information" (click)="btnRequisitos()"><img src="../../assets/imgs/icons8-informações-50.png"
-        /></button>
+    <button ion-button class="btn-anterior" (click)="btnAnterior()">Anterior</button>
+    <button ion-button class="btn-proximo" (click)="btnProximo()">Próximo</button>
+
+    <!--notifier-container></notifier-container-->
 
 </ion-content>

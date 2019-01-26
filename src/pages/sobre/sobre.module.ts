@@ -10,4 +10,4 @@ import { SobrePage } from './sobre';
     IonicPageModule.forChild(SobrePage),
   ],
 })
-export class SobrePageModule {}
+export class SobrePageModule { }

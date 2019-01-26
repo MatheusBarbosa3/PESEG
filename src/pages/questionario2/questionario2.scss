@@ -4,13 +4,21 @@ page-questionario2 {
         align-items: right;
         text-align: center;
     }
+    ion-select {
+        .select-icon {
+          .select-icon-inner {
+             color :  rgb(66, 152, 250) !important;
+          }
+        }
+    }
     .btn-menu2{
         margin-left: -140px;
         margin-top: 150px;
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;        
+        color: white;
+        background-color: #7044ff;        
      }
      .btn-anterior2{
         margin-top: 150px; 
@@ -18,7 +26,8 @@ page-questionario2 {
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;
+        color: white;
+        background-color: #7044ff;
      }
      .btn-proximo2{
         margin-left: 50px;
@@ -26,27 +35,32 @@ page-questionario2 {
         position: fixed;
         bottom: 28px;
         border-radius: 4px;
-        color: black;
+        color: white;
+        background-color: #7044ff;
      }
+     //desktop
      .color{
         width: 60%;
         position: relative;
         margin-left: 20%;
-        background: #091226; 
+        background: #0e1c3b; 
         top: 10%;
      }
-     .p{
-        color: rgb(66, 152, 250);
-        font-size: 18px;
-        background: #091226; 
-     }
-     .information{
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 60px;
-        border-radius: 100px;
+     //mobile
+     @media (max-width: 550px) {
+      .color{
+          width: 110%;
+          position: relative;
+          margin-left: -7%;
+          background: #0e1c3b; 
+          top: 10%;
+       }
     }
+     .p{
+        color: white;
+        font-size: 18px;
+        background: #0e1c3b; 
+     }
 }
 
 

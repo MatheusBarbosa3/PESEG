@@ -4,7 +4,7 @@ import { Questionario3Page } from '../questionario3/questionario3';
 import { QuestionarioPage } from '../questionario/questionario';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { ResultadoPage } from '../resultado/resultado';
-import { RequisitosPage } from '../requisitos/requisitos';
+import { ServicoProvider } from '../../providers/servico/servico';
 
 @IonicPage()
 @Component({
@@ -15,16 +15,21 @@ export class Questionario4Page {
   o;
   p;
   q;
+  servicoProvider: ServicoProvider;
+  choice: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController,
-    public fdb: AngularFireDatabase) {
+    public fdb: AngularFireDatabase, servico: ServicoProvider) {
 
+    //pegando o provider servico e injetando em requisitos, passando via parametro para questionario4
+    this.servicoProvider = servico;
+    this.choice = servico.getEscolha();
   }
 
   presentLoading4() {
     let loader = this.loadingCtrl.create({
       content: "Finalizando...",
-      duration: 500
+      duration: 200
     });
     loader.present();
   }
@@ -35,43 +40,43 @@ export class Questionario4Page {
 
   btnFinalizar() {
     if (this.o == "não") {
-      QuestionarioPage.teste[14] = "F";
+      QuestionarioPage.question[14] = "F";
     } else {
-      QuestionarioPage.teste[14] = "V";
+      QuestionarioPage.question[14] = "V";
     }
 
     if (this.p == "não") {
-      QuestionarioPage.teste[15] = "F";
+      QuestionarioPage.question[15] = "F";
     } else {
-      QuestionarioPage.teste[15] = "V";
+      QuestionarioPage.question[15] = "V";
     }
 
     if (this.q == "não") {
-      QuestionarioPage.teste[16] = "F";
+      QuestionarioPage.question[16] = "F";
     } else {
-      QuestionarioPage.teste[16] = "V";
+      QuestionarioPage.question[16] = "V";
     }
 
-    for (let index = 0; index < QuestionarioPage.teste.length - 1; index++) {
-      console.log(QuestionarioPage.teste[index]);
+    for (let index = 0; index < QuestionarioPage.question.length - 1; index++) {
+      console.log(QuestionarioPage.question[index]);
     }
 
     var countv = 0;
     var countf = 0;
 
-    //Primeira questao false
-    if (QuestionarioPage.teste[0] == "F") {
+    //Se a primeira questao for false
+    if (QuestionarioPage.question[0] == "F") {
       this.navCtrl.push(ResultadoPage, {
         resultado: "O nível de segurança é Informal",
         imagem: "../../assets/imgs/icons8-escudo-de-exclusão-100.png"
       });
     } else {
 
-      for (var i = 0; i <= QuestionarioPage.teste.length; i++) {
+      for (var i = 0; i <= QuestionarioPage.question.length; i++) {
 
-        if (QuestionarioPage.teste[i] == "F") {
+        if (QuestionarioPage.question[i] == "F") {
           countf++;
-        } else if (QuestionarioPage.teste[i] == "V") {
+        } else if (QuestionarioPage.question[i] == "V") {
           countv++;
         }
       }
@@ -79,7 +84,7 @@ export class Questionario4Page {
       console.log(countf);
       console.log(countv);
 
-      //Todos Verdadeiros
+      //Se todos forem true
       if (countv == 17) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é o Ideal",
@@ -87,7 +92,7 @@ export class Questionario4Page {
         });
       }
 
-      //Entre 9 e 16 falsos
+      //Se entre 9 e 16 falses
       else if (countf >= 9 && countf <= 16) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é Mínimo",
@@ -95,7 +100,7 @@ export class Questionario4Page {
         });
       }
 
-      //Entre 5 e 9 falsos
+      //Se entre 5 e 9 falses
       else if (countf >= 5 && countf <= 9) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é Seguro",
@@ -103,7 +108,7 @@ export class Questionario4Page {
         });
       }
 
-      //Entre 3 e 5 falsos
+      //Se entre 3 e 5 falses
       else if (countf >= 3 && countf <= 5) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é Satisfatório",
@@ -111,7 +116,7 @@ export class Questionario4Page {
         });
       }
 
-      //Até 2 falsos
+      //Se até 2 falses
       else if (countf <= 2) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é o Ideal",
@@ -119,10 +124,6 @@ export class Questionario4Page {
         });
       }
     }
-  }
-
-  btnRequisitos4() {
-    this.navCtrl.push(RequisitosPage);
   }
 
   ionViewDidLoad() {

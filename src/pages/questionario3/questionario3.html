@@ -12,12 +12,13 @@
 <ion-content padding class="p">
 
     <h3>Questionário de Maturidade de Requisitos - Etapa 3 / 4</h3>
+    <h6>Requisito: {{choice}}</h6>
 
     <ion-item class="color">
         <ion-label>
             <p class="p">O requisito atende a necessidade da empresa?</p>
         </ion-label>
-        <ion-select [(ngModel)]="j" class="p">
+        <ion-select [(ngModel)]="j" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
@@ -26,7 +27,7 @@
         <ion-label>
             <p class="p">O requisito agrega valor a empresa?</p>
         </ion-label>
-        <ion-select [(ngModel)]="k" class="p">
+        <ion-select [(ngModel)]="k" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
@@ -35,7 +36,7 @@
         <ion-label>
             <p class="p">O requisito é bem conhecido por todos?</p>
         </ion-label>
-        <ion-select [(ngModel)]="l" class="p">
+        <ion-select [(ngModel)]="l" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
@@ -44,7 +45,7 @@
         <ion-label>
             <p class="p">O requisito cumpre o que promete realizar?</p>
         </ion-label>
-        <ion-select [(ngModel)]="m" class="p">
+        <ion-select [(ngModel)]="m" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
@@ -53,7 +54,7 @@
         <ion-label>
             <p class="p">O requisito está alinhado com os objetivos da empresa?</p>
         </ion-label>
-        <ion-select [(ngModel)]="n" class="p">
+        <ion-select [(ngModel)]="n" cancelText="Cancelar" class="p">
             <ion-option value="sim">Sim</ion-option>
             <ion-option value="não">Não</ion-option>
         </ion-select>
@@ -62,7 +63,5 @@
     <button ion-button class="btn-menu3" secondary menuToggle>Menu</button>
     <button ion-button class="btn-anterior3" (click)="btnAnterior3()">Anterior</button>
     <button ion-button class="btn-proximo3" (click)="presentLoading3()" (click)="btnProximo3()">Próximo</button>
-    <button ion-button clear class="information" (click)="btnRequisitos3()"><img src="../../assets/imgs/icons8-informações-50.png"
-        /></button>
 
 </ion-content>

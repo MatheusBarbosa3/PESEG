@@ -24,8 +24,8 @@ export class ResultadoPage {
     });
     loader.present();
   }
-  
-  //De acordo com o parametro passado na pagina resultado, mostra o parametro da pagina melhoria
+
+  //De acordo com o parametro passado na pagina resultado, mostra o parametro na pagina melhoria
   btnAcMelhoria() {
     if (this.nivel1 == "O nível de segurança é Informal") {
       this.navCtrl.push(MelhoriaPage, {
@@ -64,7 +64,7 @@ export class ResultadoPage {
 
     } else if (this.nivel1 == "O nível de segurança é o Ideal") {
       this.navCtrl.push(MelhoriaPage, {
-        acao: "Para reverter este cenário, são priorizadas ações de melhorias com  seu respectivo nível de prioridade,"
+        acao: "Parabéns, foi obtido o estado ideal de Segurança da informação! Mesmo assim, são priorizadas ações de melhorias com  seu respectivo nível de prioridade,"
           + " onde a prioridade nível 1 é alta, a prioridade nível 2 é média, e a prioridade nível 3 é baixa."
           + " Tais ações de melhorias mais cotadas e com seu respectivo nível de prioridade são:"
           + " Construção das documentações (3); Elaboração de ferramentas visuais (3); Divulgação das políticas (3);"

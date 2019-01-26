@@ -1,19 +1,18 @@
 page-melhoria {
 
     .btn-ok{
-        position: fixed;
-        margin-right: 48%;
-        margin-left: 48%;
-        bottom: 28px;
+        right: 49%;
+        left: 49%;
         border-radius: 4px;
-        color: black;
+        color: white;
+        background-color: #7044ff;
     }
     .colormelhoria{
-        background: #091226;    
+        background: #0e1c3b;    
     }
     .mlh{
         padding-top: 10%;
-        color: rgb(66, 152, 250);
+        color: white;
         text-align: justify;
     }
 }

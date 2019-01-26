@@ -11,10 +11,11 @@ export class MelhoriaPage {
   melhoria = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    //pegando o parametro acao da pagina de resultados, para ser visualizado na pagina melhoria
     this.melhoria = this.navParams.get("acao");
   }
 
-  btnOK(){
+  btnOK() {
     this.navCtrl.popTo(ResultadoPage);
   }
 

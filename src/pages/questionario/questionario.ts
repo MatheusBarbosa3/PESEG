@@ -4,6 +4,8 @@ import { Questionario2Page } from '../questionario2/questionario2';
 import { LoadingController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { RequisitosPage } from '../requisitos/requisitos';
+import { ServicoProvider } from '../../providers/servico/servico';
+import { NotifierService } from 'angular-notifier';
 
 @IonicPage()
 @Component({
@@ -11,82 +13,72 @@ import { RequisitosPage } from '../requisitos/requisitos';
   templateUrl: 'questionario.html',
 })
 export class QuestionarioPage {
-  // public path = 'questionario1/';
   a;
   b;
   c;
   d;
-  static teste = new Array(18);
+  escolha: string = '';
+  static question = new Array(18);
+  servicoProvider: ServicoProvider;
+  choice: string;
+  private notifier: NotifierService;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public loadingCtrl: LoadingController, public fdb: AngularFireDatabase) {
+    public loadingCtrl: LoadingController, public fdb: AngularFireDatabase, servico: ServicoProvider,
+    notifier: NotifierService) {
 
+    //pegando o provider servico e injetando em requisitos, passando via parametro para questionario  
+    this.servicoProvider = servico;
+    this.choice = servico.getEscolha();
+    this.notifier = notifier;
   }
 
-  // getALL() {
-  //   return this.fdb.list(this.path)
-  //   .snapshotChanges()
-  //   .map(changes => {
-  //     return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
-  //   })
-  // }
+  getValor(escolha: string) {
+    this.servicoProvider.escolha = escolha;
+  }
 
-  // get(key: String){
-  //   return this.fdb.object(this.path + key)
-  //   .snapshotChanges()
-  //   .map(c => {
-  //     return {key: c.key, ...c.payload.val()}
-  //   })
-  // }
-
-  presentLoading() {
-    let loader = this.loadingCtrl.create({
-      content: "Carregando...",
-      duration: 300
-    });
-    loader.present();
+  btnAnterior() {
+    this.navCtrl.popTo(RequisitosPage);
   }
 
   btnProximo() {
     if (this.a == "não") {
-      QuestionarioPage.teste[0] = "F";
+      QuestionarioPage.question[0] = "F";
     } else {
-      QuestionarioPage.teste[0] = "V";
+      QuestionarioPage.question[0] = "V";
     }
 
     if (this.b == "não") {
-      QuestionarioPage.teste[1] = "F";
+      QuestionarioPage.question[1] = "F";
     } else {
-      QuestionarioPage.teste[1] = "V";
+      QuestionarioPage.question[1] = "V";
     }
 
     if (this.c == "não") {
-      QuestionarioPage.teste[2] = "F";
+      QuestionarioPage.question[2] = "F";
     } else {
-      QuestionarioPage.teste[2] = "V";
+      QuestionarioPage.question[2] = "V";
     }
 
     if (this.d == "não") {
-      QuestionarioPage.teste[3] = "F";
+      QuestionarioPage.question[3] = "F";
     } else {
-      QuestionarioPage.teste[3] = "V";
+      QuestionarioPage.question[3] = "V";
     }
 
-    this.navCtrl.push(Questionario2Page);
-
-    //  this.fdb.list(this.path).push(this.a);
-    //  this.fdb.list(this.path).push(this.b);
-    //  this.fdb.list(this.path).push(this.c);
-    //  this.fdb.list(this.path).push(this.d)
-    //this.navCtrl.push(Questionario2Page);
-  }
-
-  btnRequisitos() {
-    this.navCtrl.push(RequisitosPage);
+    if (this.a == '') {
+      this.notifier.notify('warning', 'Whoops! Respondeu todas questões?');
+    } else {
+      this.navCtrl.push(Questionario2Page);
+      let loader = this.loadingCtrl.create({
+        content: "Carregando...",
+        duration: 200
+      });
+      loader.present();
+    }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QuestionarioPage');
   }
-
 }
