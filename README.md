@@ -1,6 +1,6 @@
 # PESEG 
 
- A metodologia **PESEG** é um modelo de auxílio para a elaboração e manutenção de um planejamento estratégico voltado para o ambiente de segurança da informação. Para fazer esse planejamento é dado o **Questionário de Maturidade de Requisitos**, que é a ferramenta criada nesta metodologia para auxiliar o levantamento da situação atual de segurança da informação de uma empresa, calculando a maturidade das áreas seguindo o mesmo esquema de estrutura do CMMI (*Capabilty Maturity Model Integration*). 
+ A metodologia **PESEG** é um modelo de auxílio para a elaboração e manutenção de um planejamento estratégico voltado para o ambiente de segurança da informação, baseado nas normas NBR ISO/IEC 27001:2013, NBR ISO/IEC 27002:2013, NBR ISO/IEC 27005:2011. Para fazer esse planejamento é dado o **Questionário de Maturidade de Requisitos**, que é a ferramenta criada nesta metodologia para auxiliar o levantamento da situação atual de segurança da informação de uma empresa, calculando a maturidade das áreas seguindo o mesmo esquema de estrutura do CMMI (*Capabilty Maturity Model Integration*). 
 
 ## Pré-requisitos:
 Para dar continuidade nesta documentação é necessário ter intalado na sua máquina a versão mais recente do Node.Js e do NPM, e por fim instale o Ionic Framework versão 3.9.2 CLI, e algum editor de código-fonte de sua preferência, para fins de desenvolvimento e teste.
