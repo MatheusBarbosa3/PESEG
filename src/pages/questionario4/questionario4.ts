@@ -68,7 +68,7 @@ export class Questionario4Page {
     if (QuestionarioPage.question[0] == "F") {
       this.navCtrl.push(ResultadoPage, {
         resultado: "O nível de segurança é Informal",
-        imagem: "../../assets/imgs/icons8-escudo-de-exclusão-100.png"
+        imagem: "assets/imgs/icons8-escudo-de-exclusão-100.png"
       });
     } else {
 
@@ -88,7 +88,7 @@ export class Questionario4Page {
       if (countv == 17) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é o Ideal",
-          imagem: "../../assets/imgs/icons8-segurança-verificada-100.png"
+          imagem: "assets/imgs/icons8-segurança-verificada-100.png"
         });
       }
 
@@ -96,7 +96,7 @@ export class Questionario4Page {
       else if (countf >= 9 && countf <= 16) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é Mínimo",
-          imagem: "../../assets/imgs/icons8-polegares-para-baixo-100.png"
+          imagem: "assets/imgs/icons8-polegares-para-baixo-100.png"
         });
       }
 
@@ -104,7 +104,7 @@ export class Questionario4Page {
       else if (countf >= 5 && countf <= 9) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é Seguro",
-          imagem: "../../assets/imgs/icons8-cadeado-2-100.png"
+          imagem: "assets/imgs/icons8-cadeado-2-100.png"
         });
       }
 
@@ -112,7 +112,7 @@ export class Questionario4Page {
       else if (countf >= 3 && countf <= 5) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é Satisfatório",
-          imagem: "../../assets/imgs/icons8-polegar-para-cima-100.png"
+          imagem: "assets/imgs/icons8-polegar-para-cima-100.png"
         });
       }
 
@@ -120,7 +120,7 @@ export class Questionario4Page {
       else if (countf <= 2) {
         this.navCtrl.push(ResultadoPage, {
           resultado: "O nível de segurança é o Ideal",
-          imagem: "../../assets/imgs/icons8-segurança-verificada-100.png"
+          imagem: "assets/imgs/icons8-segurança-verificada-100.png"
         });
       }
     }
